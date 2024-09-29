@@ -1,1 +1,1 @@
-ToDo Application Made using Recat + TypeScript .
+ToDo Application Made using React + TypeScript .
