@@ -9,18 +9,24 @@ type FormButtonProps={
 }
 
 const StyledButton=styled.button`
-  width: 80%;
-  padding: 10px;
+  width: 60%;
+  height:41px;
+  padding: 2px;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   background-color: #007bff;
   color: #fff;
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   transition: all 0.2s;
+  margin-top:5px;
+  margin:2px;
+  outline:none;
   &:hover {
-    color: white;
     box-shadow: 5px 5px 10px black;
+  }
+    &:active {
+    border:green;
   }
 `;
 
