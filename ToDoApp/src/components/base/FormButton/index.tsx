@@ -25,9 +25,6 @@ const StyledButton=styled.button`
   &:hover {
     box-shadow: 5px 5px 10px black;
   }
-    &:active {
-    border:green;
-  }
 `;
 
 const FormButton=({ onClick ,ButtonName,...rest}:FormButtonProps)=>{

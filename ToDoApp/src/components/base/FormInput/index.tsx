@@ -26,7 +26,7 @@ border-radius: 10px;
 const FormInput=({ type,placeholder ,...rest}:FormInputProps)=>{
    
    return (
-      <StyledInput  autocomplete="off"  type={type} placeholder={placeholder} {...rest}/>
+      <StyledInput  autocomplete="off" type={type} placeholder={placeholder} {...rest}/>
    )
 }
 
