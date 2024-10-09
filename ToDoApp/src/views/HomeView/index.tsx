@@ -38,12 +38,14 @@ type HomePageProps={
     onClickAdd:()=>void;
     onChange:(e?:any)=>void;
     onChangeCheckBox:(item?:string)=>void;
+    logOut:()=>void
 }
 
-const HomeView=({List,onClickDelete,onSubmit,onClickAdd,onChange,onChangeCheckBox,inputValue}:HomePageProps)=>{
+const HomeView=({List,onClickDelete,onSubmit,onClickAdd,onChange,onChangeCheckBox,inputValue,logOut}:HomePageProps)=>{
     return(
         <>
             <Home>
+                <button onClick={logOut} style={{position:"absolute",right:"20px",top:"20px",fontSize:"20px"}}>LogOut</button>
                 <Heading>To Do List</Heading>
                 <div>
                     <Form onSubmit={onSubmit} onClickAdd={onClickAdd} onChange={onChange} inputValue={inputValue}/>

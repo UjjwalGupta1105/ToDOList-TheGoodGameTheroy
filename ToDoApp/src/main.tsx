@@ -3,9 +3,23 @@ import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
 import './App.css'
+import AuthContext from "./contexts/AuthsContext.tsx"
+import {Provider as AlertProvider,positions,transitions} from 'react-alert';
+import AltertTemplate from "react-alert-template-basic"
+
+
+const options={
+  timeout:5000,
+  transition:transitions.SCALE,
+  position:positions.BOTTOM_CENTER
+}
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <App />
+    <AlertProvider template={AltertTemplate} {...options}>
+      <AuthContext>
+       <App />
+      </AuthContext>
+    </AlertProvider>
   </StrictMode>,
 )

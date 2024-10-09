@@ -1,7 +1,11 @@
 import HomeView from "../../views/HomeView";
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom"
+import {auth} from "../../contexts/AuthsContext.tsx"
 
 const HomeContainer=()=>{
+  const {logOut}=auth()
+  const navigate=useNavigate()
 
   const [data,newData]=useState({
     name:"",
@@ -83,6 +87,12 @@ const setCheck=(id:any)=>{
 })
 }
 
+    // LogOut Handling
+    const LogOut=()=>{
+      logOut()
+      navigate("/")
+    }
+
 
     return <HomeView
      List={List} 
@@ -92,6 +102,7 @@ const setCheck=(id:any)=>{
      onChange={handleChange}
      onChangeCheckBox={(id)=>setCheck(id)}
      inputValue={data.name}
+     logOut={LogOut}
     />
 }
 
