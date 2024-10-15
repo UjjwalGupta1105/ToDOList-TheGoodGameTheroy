@@ -1,25 +1,24 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
-import './App.css'
-import AuthContext from "./contexts/AuthsContext.tsx"
-import {Provider as AlertProvider,positions,transitions} from 'react-alert';
-import AltertTemplate from "react-alert-template-basic"
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import App from "./App.tsx";
+import "./index.css";
+import "./App.css";
+import AuthContext from "./contexts/AuthContext.tsx/index.tsx";
+import { Provider as AlertProvider, positions, transitions } from "react-alert";
+import AltertTemplate from "react-alert-template-basic";
 
+const options = {
+  timeout: 5000,
+  transition: transitions.SCALE,
+  position: positions.BOTTOM_CENTER,
+};
 
-const options={
-  timeout:5000,
-  transition:transitions.SCALE,
-  position:positions.BOTTOM_CENTER
-}
-
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <AlertProvider template={AltertTemplate} {...options}>
       <AuthContext>
-       <App />
+        <App />
       </AuthContext>
     </AlertProvider>
   </StrictMode>,
-)
+);

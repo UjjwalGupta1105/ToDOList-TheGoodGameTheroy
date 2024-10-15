@@ -1,9 +1,7 @@
-import SignUpContainer from "../../container/SignUpContainer"
+import SignUpContainer from "../../containers/SignUpContainer";
 
-const SignUpPage=()=>{
-    return(
-        <SignUpContainer/>
-    )
-}
+const SignUpPage = () => {
+  return <SignUpContainer />;
+};
 
-export default SignUpPage
+export default SignUpPage;

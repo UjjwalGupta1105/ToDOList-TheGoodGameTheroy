@@ -17,12 +17,12 @@
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
-*{
-  margin:0px;
+* {
+  margin: 0px;
   padding: 0px;
   box-sizing: border-box;
 }
-body{
+body {
   background-color: white;
 }
 
