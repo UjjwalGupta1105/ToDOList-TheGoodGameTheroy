@@ -115,7 +115,7 @@ const AuthContext = ({ children }: AuthContextProps) => {
   };
 
   const isAuthenticated = () => {
-    if (user.userId && user.email) return true;
+    if (user.userId !="" && user.email !="" ) return true;
     else {
       return false;
     }
